@@ -1,3 +1,6 @@
+assets/*
+final/*
+
 # Logs
 logs
 *.log
