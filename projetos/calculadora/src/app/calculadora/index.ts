@@ -1,1 +1,1 @@
-export * from './calculadora.module';
+export * from './calculadora.module'; // Torna a classe calculadoraModule "pública"
