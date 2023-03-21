@@ -17,8 +17,7 @@ export class CalculadoraService {
       case CalculadoraService.SUBTRACAO:
         return num1-num2;
       case CalculadoraService.DIVISAO:
-        try{ return num1/num2; }
-        catch(e) { return 0 }
+        return num1/num2
       case CalculadoraService.MULTIPLICACAO:
         return num1*num2;
       default:
