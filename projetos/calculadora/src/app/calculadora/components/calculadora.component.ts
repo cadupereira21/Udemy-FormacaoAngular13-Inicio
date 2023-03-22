@@ -47,4 +47,37 @@ export class CalculadoraComponent implements OnInit{
     if(numConcat === '.' && numAtual.indexOf('.') > -1) return numAtual
     return numAtual + numConcat;
   }
+
+  definirOperacao(operacao:string){
+    if (this.operacao === null) {
+      this.operacao = operacao;
+      return;
+    }
+
+    if(this.numero2 !== null){
+      this.resultado = this.calculadoraService.calcular(parseFloat(this.numero1), parseFloat(this.numero2), this.operacao);
+      this.operacao=operacao;
+      this.numero1=this.resultado.toString();
+      this.numero2=null;
+      this.resultado=null;
+    }
+  }
+
+  calcular(){
+    if(this.numero2 ===null) return;
+
+    this.resultado = this.calculadoraService.calcular(
+      parseFloat(this.numero1),
+      parseFloat(this.numero2),
+      this.operacao
+    );
+  }
+
+  get display():string{
+    if(this.resultado !== null) return this.resultado.toString();
+    if(this.numero2 !== null) return this.numero2;
+    return this.numero1;
+  }
 }
+
+
