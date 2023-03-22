@@ -30,15 +30,14 @@ export class CalculadoraComponent implements OnInit{
 
   adicionarNumero(num:string):void{
 
-    /*
     if(this.operacao === null) this.numero1 = this.concatenarNumero(this.numero1, num);
     else this.numero2 = this.concatenarNumero(this.numero2, num);
-    */
-    let actualDigit:string;
-    if(this.operacao === null) actualDigit = this.numero1;
-    else actualDigit = this.numero2;
 
-    actualDigit = this.concatenarNumero(actualDigit, num);
+    // let actualDigit:string;
+    // if(this.operacao === null) actualDigit = this.numero1;
+    // else actualDigit = this.numero2;
+
+    // actualDigit = this.concatenarNumero(actualDigit, num);
   }
 
   concatenarNumero(numAtual:string, numConcat:string):string {
