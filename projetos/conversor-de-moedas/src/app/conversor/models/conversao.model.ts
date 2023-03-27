@@ -1,6 +1,7 @@
 export class Conversao{
-    moedaDe: any;
-  moedaPara: any;
+    valor: number;
+    moedaDe: string;
+    moedaPara: string;
     constructor(
         moedaDe?: string,
         moedaPara?: string,
